@@ -1,0 +1,128 @@
+.ans-container {
+    margin-top: 20px;
+}
+
+.ans-loading {
+    display: none;
+    text-align: center;
+    padding: 20px;
+    background: rgba(255, 255, 255, 0.8);
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 1000;
+    border-radius: 4px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.ans-table {
+    margin-top: 20px;
+}
+
+/* Modal styles */
+.ans-modal {
+    display: none;
+    position: fixed;
+    z-index: 999;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+.ans-modal-content {
+    position: relative;
+    background-color: #fefefe;
+    margin: 5% auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%;
+    max-width: 800px;
+    border-radius: 4px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+}
+
+.ans-modal-close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.ans-modal-close:hover,
+.ans-modal-close:focus {
+    color: #000;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.ans-modal h2 {
+    margin-top: 0;
+    margin-bottom: 20px;
+    padding-bottom: 10px;
+    border-bottom: 1px solid #eee;
+}
+
+.ans-modal-body {
+    max-height: 60vh;
+    overflow-y: auto;
+}
+
+/* Table styles */
+.ans-table th,
+.ans-modal table th {
+    font-weight: 600;
+}
+
+.ans-table td,
+.ans-modal table td {
+    vertical-align: middle;
+}
+
+/* Button styles */
+.ans-table .button {
+    margin: 0 5px;
+}
+
+.ans-table .button-primary {
+    margin-right: 5px;
+}
+
+/* Ensure buttons in the same cell have proper spacing */
+.ans-table td .button + .button {
+    margin-left: 5px;
+}
+
+/* Make the actions column wide enough for two buttons */
+.ans-table th:last-child,
+.ans-table td:last-child {
+    width: 200px;
+    text-align: right;
+}
+
+/* Responsive styles */
+@media screen and (max-width: 782px) {
+    .ans-modal-content {
+        width: 95%;
+        margin: 10% auto;
+    }
+    
+    .ans-table,
+    .ans-modal table {
+        display: block;
+        overflow-x: auto;
+    }
+    
+    .ans-table td:last-child {
+        text-align: left;
+    }
+    
+    .ans-table .button {
+        margin: 5px 0;
+        display: block;
+        text-align: center;
+    }
+} 
